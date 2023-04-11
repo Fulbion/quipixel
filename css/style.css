@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 100vh;
+    color: white;
+    background-color: rgb(32, 32, 32);
+    background-image: url("../img/th.jpg");
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+nav li a {
+    color: white;
+    border-bottom: 1px solid transparent;
+    transition: 0.33s;
+}
+
+nav li:hover a {
+    border-bottom: 1px solid orange;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    padding: 32px;
+}
+
+nav {
+    width: 100%;
+    max-width: 1600px;
+    height: 32px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+nav .logo {
+    font-size: 32px;
+    font-weight: 600;
+    color: white;
+}
+
+nav .logo:hover {
+    color: whitesmoke;
+}
+
+nav ul {
+    display: flex;
+    gap: 32px;
+}
+
+nav .toggle-nav {
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+}
+
+nav .toggle-nav:hover {
+    color: orange;
+}
+
+.dropdown-nav {
+    display: none;
+    position: absolute;
+    right: 32px;
+    top: 96px;
+    width: 300px;
+    height: 0;
+    overflow: hidden;
+    border: none;
+    transition: height 0.33s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.dropdown-nav.open {
+    height: 198px;
+    border: 1px solid rgba(255, 255, 255, 0.33);
+}
+
+.dropdown-nav li a {
+    color: white;
+}
+
+.dropdown-nav li:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+.dropdown-nav li {
+    padding: 12px;
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@supports ((backdrop-filter: none) or (-webkit-backdrop-filter: none)) {
+    header {
+        background-color: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.33);
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .dropdown-nav {
+        background-color: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-radius: 12px;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    nav ul {
+        display: none;
+    }
+    
+    nav .toggle-nav {
+        display: block;
+    }
+    
+    .dropdown-nav {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .dropdown-nav {
+        left: 32px;
+        width: unset;
+    }
+}
+
+/* Main section */
+main {
+    margin-top: 64px;
+}
+
+section.title {
+    padding: 256px 10%;
+    display: grid;
+    align-items: center;
+}
+
+.links-box {
+    display: flex;
+    flex-direction: column;
+    font-size: 32px;
+    justify-content: right;
+}
+
+h1.page-title {
+    font-size: 72px;
+    font-weight: 500;
+}
+
+.page-subtitle {
+    font-size: 28px;
+    color: lightgray;
+}
+
+button.downloadQPXE {
+    padding: 16px;
+    outline: none;
+    border: none;
+    border-radius: 32px;
+    font-size: 16px;
+    cursor: pointer;
+    color: white;
+    background-color: darkorange;
+    transition: 0.33s;
+}
+
+button.downloadQPXE:hover {
+    background-color: orange;
+}
